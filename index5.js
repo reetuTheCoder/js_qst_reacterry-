@@ -19,6 +19,7 @@ function getFibonacci(n) {
     return [0];
   }
 
+  
   const fib = [0, 1];
 
   console.log("fib111", fib);
