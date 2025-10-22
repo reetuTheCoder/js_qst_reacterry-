@@ -53,4 +53,4 @@ function removeDuplicatStr(str) {
 function removeDuplicatStr(str) {
   return [...new Set(str)]
 }
-console.log(removeDuplicatStr("singhh")); 
+console.log(removeDuplicatStr("singhhgti")); 
