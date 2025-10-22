@@ -158,18 +158,6 @@ function removeDuplicateChar(str) {
 }
 console.log("removeDuplicateChar", removeDuplicateChar("singhh"));
 
-
-
-
-
-
-
-
-
-
-
-
-
 // Check if two strings are anagrams of each other.
 //what is anagrams = when both strings contain the same characters,
 
@@ -210,3 +198,32 @@ function isAnagrams(str1, str2) {
   return true;
 }
 console.log("isAnagrams gfdg: ", isAnagrams("seema", "meesa"));
+
+// Reverse the order of words in a sentence. Example: "hello world" → "world hello".
+
+function reverseStr(str) {
+  let word = "";
+  let output = [];
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      word += str[i];
+      console.log("word", word);
+    } else {
+      if (word) {   
+        output.unshift(word);
+
+        console.log("output", output);
+        word = "";
+      }
+    }
+  }
+  if (word) {
+    output.unshift(word);
+  }
+
+  console.log("output1111", output);
+
+  return output.join(" ");
+}
+console.log("reverseStr", reverseStr("hello world"));
