@@ -34,6 +34,8 @@ function nonRepeatLastChar(str) {
 
 console.log("last not repeated char", nonRepeatLastChar(str));
 
+//Find the first character that appears more than once.
+
 function nonRepeatFirstChar(str) {
   let charcount = {};
 
@@ -55,12 +57,34 @@ function nonRepeatFirstChar(str) {
     // console.log(charcount[char]);
   }
 
- for (const key of str) {
+  for (const key of str) {
     if (charcount[key] === 1) {
-       return key 
+      return key;
     }
- }
- return null
+  }
+  return null;
 }
 
 console.log("first not repeated char", nonRepeatFirstChar(str));
+
+// Write a function that counts vowels and consonants in a string.
+
+console.log(str);
+
+function countsVowelAndConsonants(str) {
+  let vowels = "aeiouAEIOU";
+  let totalVowels = [];
+  let totalConst = [];
+
+  for (const char of str) {
+    // console.log(char);
+    if (vowels.includes(char)) {
+      totalVowels.push(char);
+    } else {
+      totalConst.push(char);
+    }
+  }
+  return { totalVowels, totalConst };
+}
+
+console.log("find vowels and const:-", countsVowelAndConsonants(str));
