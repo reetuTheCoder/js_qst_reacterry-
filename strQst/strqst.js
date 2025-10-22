@@ -88,3 +88,25 @@ function countsVowelAndConsonants(str) {
 }
 
 console.log("find vowels and const:-", countsVowelAndConsonants(str));
+
+// Determine if a string is a palindrome (reads the same forwards and backwards).
+
+function ispalindromeStr(str) {
+  let output = "";
+
+  for (let i = str.length -1; i >= 0; i--) {
+    output += str[i];
+  }
+  return output === str;
+}
+// console.log("string is a palindrome:-", ispalindromeStr("maam"));
+
+
+function ispalindromeStr(str) {
+  let reversestr = str.split("").reverse().join("")
+//   console.log(reversestr);
+
+  return str === reversestr
+  
+}
+console.log("string is a palindrome:-", ispalindromeStr("level"));
