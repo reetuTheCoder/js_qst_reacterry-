@@ -148,13 +148,65 @@ console.log("mostfrequentChar", mostfrequentChar("reetuu"));
 // }
 // console.log("removeDuplicateChar", removeDuplicateChar("reetuu"));
 
-
 function removeDuplicateChar(str) {
-  return str.split("").filter((ele, index)=> str.indexOf(ele) === index)
+  return str.split("").filter((ele, index) => str.indexOf(ele) === index);
 }
 console.log("removeDuplicateChar", removeDuplicateChar("reetuu"));
 
 function removeDuplicateChar(str) {
-    return [...new Set(str)]
+  return [...new Set(str)];
 }
 console.log("removeDuplicateChar", removeDuplicateChar("singhh"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Check if two strings are anagrams of each other.
+//what is anagrams = when both strings contain the same characters,
+
+function isAnagrams(str1, str2) {
+  let newStr1 = str1.toLowerCase();
+  let newStr2 = str2.toLowerCase();
+
+  return (
+    newStr1.split("").sort().join("") === newStr2.split("").sort().join("")
+  );
+}
+
+// console.log("isAnagrams", isAnagrams("seema", "reema"));
+// console.log("isAnagrams", isAnagrams("seema", "meesa"));
+
+function isAnagrams(str1, str2) {
+  let newStr1 = str1.toLowerCase();
+  let newStr2 = str2.toLowerCase();
+
+  let charfeq = {};
+
+  if (newStr1.length !== newStr2.length) {
+    return false;
+  }
+
+  for (const char of newStr1) {
+    charfeq[char] = (charfeq[char] || 0) + 1;
+  }
+
+  for (const char of newStr2) {
+    if (!charfeq[char]) {
+      return false;
+    } else {
+      charfeq[char]--;
+    }
+  }
+
+  return true;
+}
+console.log("isAnagrams gfdg: ", isAnagrams("seema", "meesa"));
