@@ -94,19 +94,37 @@ console.log("find vowels and const:-", countsVowelAndConsonants(str));
 function ispalindromeStr(str) {
   let output = "";
 
-  for (let i = str.length -1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     output += str[i];
   }
   return output === str;
 }
 // console.log("string is a palindrome:-", ispalindromeStr("maam"));
 
-
 function ispalindromeStr(str) {
-  let reversestr = str.split("").reverse().join("")
-//   console.log(reversestr);
+  let reversestr = str.split("").reverse().join("");
+  //   console.log(reversestr);
 
-  return str === reversestr
-  
+  return str === reversestr;
 }
 console.log("string is a palindrome:-", ispalindromeStr("level"));
+
+// Find the character that appears most frequently in a string.
+
+function mostfrequentChar(str) {
+  let feqs = {};
+  let repeatedChar = [];
+
+  for (const char of str) {
+    feqs[char] = (feqs[char] || 0) + 1;
+  }
+
+  for (const char in feqs) {
+    if (feqs[char] > 1) {
+      repeatedChar.push(char);
+    }
+  }
+  return repeatedChar;
+}
+
+console.log("mostfrequentChar", mostfrequentChar("reetuu"));
