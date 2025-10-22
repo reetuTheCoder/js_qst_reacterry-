@@ -128,3 +128,33 @@ function mostfrequentChar(str) {
 }
 
 console.log("mostfrequentChar", mostfrequentChar("reetuu"));
+
+// Remove all duplicate characters from a string and return the cleaned string.
+
+// function removeDuplicateChar(str) {
+//   let feqs = {};
+//   let uniqueChar = "";
+
+//   for (const char of str) {
+//     feqs[char] = (feqs[char] || 0) + 1;
+//   }
+
+//   for (const char of str) {
+//     if (feqs[char] === 1) {
+//       uniqueChar += char;
+//     }
+//   }
+//   return uniqueChar;
+// }
+// console.log("removeDuplicateChar", removeDuplicateChar("reetuu"));
+
+
+function removeDuplicateChar(str) {
+  return str.split("").filter((ele, index)=> str.indexOf(ele) === index)
+}
+console.log("removeDuplicateChar", removeDuplicateChar("reetuu"));
+
+function removeDuplicateChar(str) {
+    return [...new Set(str)]
+}
+console.log("removeDuplicateChar", removeDuplicateChar("singhh"));
