@@ -24,3 +24,13 @@ function countVowel(str) {
 }
 
 console.log(countVowel("reetu"));
+
+
+
+let arr = [1, 5, 2, 9, 3, 12];
+
+function maxNum(arr) {
+  return arr.reduce((acc, curval) => (acc > curval ? acc : curval));
+}
+
+console.log(maxNum(arr));
