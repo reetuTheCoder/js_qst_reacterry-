@@ -1,5 +1,5 @@
 let str = "hello";
-console.log(str.split("").reverse().join(""));
+// console.log(str.split("").reverse().join(""));
 
 function reversedStr(str) {
   let result = "";
@@ -8,7 +8,7 @@ function reversedStr(str) {
   }
   return result;
 }
-console.log(reversedStr(str));
+// console.log(reversedStr(str));
 
 function countVowel(str) {
   let vowels = "aeiouAEIOU";
@@ -23,9 +23,7 @@ function countVowel(str) {
   return storeVoWel;
 }
 
-console.log(countVowel("reetu"));
-
-
+// console.log(countVowel("reetu"));
 
 let arr = [1, 5, 2, 9, 3, 12];
 
@@ -33,4 +31,20 @@ function maxNum(arr) {
   return arr.reduce((acc, curval) => (acc > curval ? acc : curval));
 }
 
-console.log(maxNum(arr));
+// console.log(maxNum(arr));
+
+function sumArr(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total
+}
+
+console.log(sumArr(arr));
+
+function sumArr(arr) {
+ return arr.reduce((acc, curval) => acc + curval)
+}
+
+console.log(sumArr(arr));
