@@ -64,7 +64,25 @@ function isObjectEmpty(obj) {
     Object.keys(obj).length === 0
   );
 }
-console.log(isObjectEmpty({}));
-console.log(isObjectEmpty([]));
-console.log(isObjectEmpty(null)); 
-console.log(isObjectEmpty({ a: 1 }));
+// console.log(isObjectEmpty({}));
+// console.log(isObjectEmpty([]));
+// console.log(isObjectEmpty(null));
+// console.log(isObjectEmpty({ a: 1 }));
+
+let arr1 = [1, 2, 2, 3, 3, 4];
+
+// console.log(arr1.filter((el, index) => arr1.indexOf(el) === index));
+
+// console.log([...new Set(arr1)]);
+
+function removeDuplicate(arr) {
+  let unique = []
+  for (let i = 0; i < arr.length; i++) {
+   if (arr.indexOf(arr[i]) === i) {
+     unique.push(arr[i])
+   }
+    
+  }
+  return unique
+}
+console.log(removeDuplicate(arr1));
