@@ -38,13 +38,33 @@ function sumArr(arr) {
   for (let i = 0; i < arr.length; i++) {
     total += arr[i];
   }
-  return total
+  return total;
 }
 
-console.log(sumArr(arr));
+// console.log(sumArr(arr));
 
 function sumArr(arr) {
- return arr.reduce((acc, curval) => acc + curval)
+  return arr.reduce((acc, curval) => acc + curval);
 }
 
-console.log(sumArr(arr));
+// console.log(sumArr(arr));
+
+function isObjectEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+// console.log(isObjectEmpty({}));
+// console.log(isObjectEmpty([]));
+// console.log(isObjectEmpty({ a: 1 }));
+
+function isObjectEmpty(obj) {
+  return (
+    obj &&
+    typeof obj === "object" &&
+    !Array.isArray(obj) &&
+    Object.keys(obj).length === 0
+  );
+}
+console.log(isObjectEmpty({}));
+console.log(isObjectEmpty([]));
+console.log(isObjectEmpty(null)); 
+console.log(isObjectEmpty({ a: 1 }));
