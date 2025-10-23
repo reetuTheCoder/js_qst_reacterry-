@@ -37,3 +37,6 @@ Why k % arr.length ??
 k % arr.length ensures k never exceeds the array length. like - k = 7 % 5; // 7 divided by 5 leaves remainder 2 so this means rotating by 7 is the same as rotating by 2
 
 In short: k = k % arr.length → keep k within array size so rotation works correctly and efficiently.
+
+note - So 7 rotations = 5 (full cycle) + 2 extra rotations → same as 2 rotations 
+// you can get idia like if length is 5 of the array and you are tring 7 time so whatever out will be of 2 same will be 7 
