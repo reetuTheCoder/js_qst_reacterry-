@@ -219,6 +219,8 @@ function reverseStr(str) {
     }
   }
   if (word) {
+    console.log("what is here", word);
+    
     output.unshift(word);
   }
 
