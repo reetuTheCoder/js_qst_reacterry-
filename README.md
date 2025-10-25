@@ -7,3 +7,4 @@ Find longest word in sentence
 
 Common elements between arrays
 Flatten nested array
+Rotate array k times (right)
