@@ -89,7 +89,7 @@ let commonArr = [arr3, arr4];
 
 function commonEle(arr) {
   console.log("arr val", arr);
-  
+
   let feq = {};
   let output = [];
   let flatArr = arr.flat();
@@ -111,6 +111,46 @@ function commonEle(arr) {
   return output;
 }
 
-console.log("fdgdg", commonEle(commonArr));
+// console.log("fdgdg", commonEle(commonArr));
+
+// 6 Check Anagram
+let str1 = "listen";
+let str2 = "silent";
+
+// console.log(str1.split("").sort().join("") === str2.split("").sort().join(""));
+// console.log(str2.split("").sort().join(""));
+
+// function isAnagram(str1, str2) {
+//   return  str1.split("").sort().join("") === str2.split("").sort().join("")
+// }
+
+// console.log("isAnagram", isAnagram(str1, str2));
+
+function isAnagram(str1, str2) {
+  let feq = {};
+  if (str1.toLowerCase().length !== str2.toLowerCase().length) {
+    return false;
+  }
+
+  for (const char of str1.toLowerCase()) {
+    feq[char] = (feq[char] || 0) + 1;
+  }
+
+  for (const char of str2.toLowerCase()) {
+    if (!feq[char]) {
+      console.log("feq[char]", !feq[char]);
+      
+      return false;
+    } else {
+      console.log("dnds ds", feq[char]);
+      
+      feq[char]--;
+    }
+  }
+
+  return true
+}
+
+console.log("isAnagram", isAnagram(str1, str2));
 
 
