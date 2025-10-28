@@ -1,10 +1,14 @@
 let str = "Our modern world is unthinkable without software";
 
-//Q1 make str in the array form
+//Convert the given string into an array of words.
+// Create a new array that contains only the elements at even indices from the original array.
+// After adding each even-indexed element to the new array, also add one element (1) from the array given below.
+// Capitalize the first letter of each word in the array.
+// Filter out all words whose length is greater than or equal to 4.
+// Find all words that start with a vowel.
+// Remove all vowels from the given string.
+
 let makeArr = str.split(" ");
-
-//Q2 now only store even index value in a array
-
 function evenIndexVal(arr) {
   let evenIndex = [];
   for (let i = 0; i < arr.length; i++) {
@@ -17,8 +21,7 @@ function evenIndexVal(arr) {
 }
 // console.log(evenIndexVal(makeArr));
 
-//Q3 when you add evenIdx ele in the aaray just after each even ele added in even arr add 1, 1 ele from blelow array
-// like ["Our", "one", "world", "two"]
+
 let numStr = ["one", "two", "three", "four", "five", "six", "seven"];
 
 function evenIndexVal1(arr, numStr) {
@@ -38,7 +41,6 @@ function evenIndexVal1(arr, numStr) {
 
 // console.log(evenIndexVal1(makeArr, numStr));
 
-//Q4 each  word first letter should be capital
 function evenIndexVal1(arr, numStr) {
   let evenIndex = [];
 
@@ -61,7 +63,7 @@ function evenIndexVal1(arr, numStr) {
 
 // console.log(evenIndexVal1(makeArr, numStr));
 
-//Q5 filter out that word whose length is >= 4
+
 function evenIndexValfilter(arr, numStr) {
   let evenIndex = [];
 
@@ -88,7 +90,6 @@ function evenIndexValfilter(arr, numStr) {
 
 // console.log(evenIndexValfilter(makeArr, numStr));
 
-//Q6 find that word whose start with vowel
 function findStartWorldWithVowel(arr, numStr) {
   let evenIndex = [];
 
@@ -117,7 +118,7 @@ function findStartWorldWithVowel(arr, numStr) {
 
 console.log(findStartWorldWithVowel(makeArr, numStr));
 
-//Q7 remove all vowels
+
 function removeVowels(arr, numStr) {
   let evenIndex = [];
 
