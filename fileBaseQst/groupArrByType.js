@@ -26,9 +26,11 @@ function groupArrByType(arr) {
       type = typeof item;
     }
  
-    (acc[type] = acc[type] || []).push(item);
+    (acc.grouped[type] = acc.grouped[type] || []).push(item); // here i grouped all types
+
+    acc.counts[type] = (acc.counts[type] || 0) + 1
     return acc;
-  }, {});
+  }, {grouped : {}, counts: {}});
 }
 
 console.log(groupArrByType(arr));
